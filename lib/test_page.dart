@@ -19,10 +19,9 @@ class TestPage extends StatelessWidget {
         ), 
         body: SizedBox(
           //Container prend toute la largeur de l'écran
-          width: double.infinity,
-          child :Column(
+          height: double.infinity,
+          child :Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text("This is a test page"),
               ElevatedButton(onPressed: (){}, child: Text("Click Me")),

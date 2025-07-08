@@ -20,18 +20,29 @@ class TestPage extends StatelessWidget {
         body: SizedBox(
           //Container prend toute la largeur de l'écran
           height: double.infinity,
-          child :Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+          child :Column(children: [
+            Text("Debut Page",style: TextStyle(fontSize: 30, color: Colors.red)),
+            SizedBox(height: 670),
+            Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Text("This is a test page"),
-              ElevatedButton(onPressed: (){}, child: Text("Click Me")),
-              Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.blue,
-              )  
+              Column(children: [
+                Icon(Icons.phone , color: Colors.blue , size: 30),
+                Text("Phone",style:TextStyle(fontSize: 20, color: Colors.blue)),
+              ]),
+
+              Column(children: [
+                Icon(Icons.navigate_next , color: Colors.blue, size: 30),
+                Text("Route",style:TextStyle(fontSize: 20, color: Colors.blue)),
+              ]),
+              
+              Column(children: [
+                Icon(Icons.share, color: Colors.blue , size: 30),
+                Text("Share",style:TextStyle(fontSize: 20, color: Colors.blue)),
+              ]), 
             ],
           ),
+          ],)
         )
       ),
     );

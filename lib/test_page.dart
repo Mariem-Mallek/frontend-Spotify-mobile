@@ -17,10 +17,12 @@ class TestPage extends StatelessWidget {
             Icon(Icons.settings),
           ]
         ), 
-        body: Container(
+        body: SizedBox(
           //Container prend toute la largeur de l'écran
           width: double.infinity,
           child :Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text("This is a test page"),
               ElevatedButton(onPressed: (){}, child: Text("Click Me")),

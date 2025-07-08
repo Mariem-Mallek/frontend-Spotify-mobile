@@ -17,7 +17,22 @@ class TestPage extends StatelessWidget {
             Icon(Icons.settings),
           ]
         ), 
-        body: Text("Hello World!")),
+        body: Container(
+          //Container prend toute la largeur de l'écran
+          width: double.infinity,
+          child :Column(
+            children: [
+              Text("This is a test page"),
+              ElevatedButton(onPressed: (){}, child: Text("Click Me")),
+              Container(
+                  height: 100,
+                  width: 100,
+                  color: Colors.blue,
+              )  
+            ],
+          ),
+        )
+      ),
     );
   }
 }

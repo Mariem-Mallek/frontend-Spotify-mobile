@@ -8,6 +8,7 @@ import '/utils/theme/custom-themes/chip_theme.dart';
 import '/utils/theme/custom-themes/dialog_theme.dart';
 import '/utils/theme/custom-themes/outlined_button_theme.dart';
 import '/utils/theme/custom-themes/text_button_theme.dart';
+import '/utils/theme/custom-themes/textformfield_theme.dart';
 
 
 
@@ -26,6 +27,7 @@ class AppTheme{
     chipTheme: TChipTheme.lightChipTheme,
     outlinedButtonTheme: TOutlinedButtonTheme.lightOutlinedButtonTheme,
     textButtonTheme: TTextButtonTheme.lightTextButtonTheme,
+    inputDecorationTheme: TTextFormFieldTheme.lightInputDecorationTheme,
 
   );
 
@@ -42,6 +44,7 @@ class AppTheme{
     chipTheme: TChipTheme.darkChipTheme,
     outlinedButtonTheme: TOutlinedButtonTheme.darkOutlinedButtonTheme,
     textButtonTheme: TTextButtonTheme.darkTextButtonTheme,
+    inputDecorationTheme: TTextFormFieldTheme.darkInputDecorationTheme,
   );
 
     

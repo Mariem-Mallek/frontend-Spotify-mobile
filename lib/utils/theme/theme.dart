@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '/utils/constants/colors.dart';
 import '/utils/theme/custom-themes/elevated_button_theme.dart';
+import '/utils/theme/custom-themes/appbar_theme.dart';
 
 class AppTheme{
   AppTheme._();
@@ -11,6 +12,7 @@ class AppTheme{
     primaryColor: const Color(0xFF1DB954),
     scaffoldBackgroundColor: TColors.light,
     elevatedButtonTheme: TElevatedButtonTheme.lightElevatedButtonTheme,
+    appBarTheme: TAppBarTheme.lightAppBarTheme,
   );
 
   static ThemeData darkTheme = ThemeData(
@@ -20,6 +22,7 @@ class AppTheme{
     primaryColor: const Color(0xFF1DB954),
     scaffoldBackgroundColor: TColors.dark,
     elevatedButtonTheme: TElevatedButtonTheme.darkElevatedButtonTheme,
+    appBarTheme: TAppBarTheme.darkAppBarTheme,
   );
 
     

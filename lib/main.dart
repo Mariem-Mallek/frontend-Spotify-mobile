@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'utils/theme/theme.dart';
+
+import 'screens/test_theme/test_text.dart';
 import 'screens/test_theme/test_elevateButton.dart';
+
 
 
 void main() {
@@ -18,7 +21,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme : AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
-      home: const TestElevateButtonPage(),
+      home: const TestTextScreen(),
     );
   }
 }

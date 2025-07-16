@@ -5,7 +5,7 @@ import '/utils/theme/custom-themes/appbar_theme.dart';
 import '/utils/theme/custom-themes/buttom_sheet_theme.dart';
 import '/utils/theme/custom-themes/checkbox_theme.dart';
 import '/utils/theme/custom-themes/chip_theme.dart';
-
+import '/utils/theme/custom-themes/dialog_theme.dart';
 
 
 
@@ -22,6 +22,8 @@ class AppTheme{
     bottomSheetTheme: TBottomSheetTheme.lightBottomSheetTheme,
     checkboxTheme: TCheckboxTheme.lightCheckboxTheme,
     chipTheme: TChipTheme.lightChipTheme,
+    
+    
 
   );
 

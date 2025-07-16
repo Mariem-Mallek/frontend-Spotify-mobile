@@ -3,6 +3,7 @@ import 'utils/theme/theme.dart';
 
 import 'screens/test_theme/test_text.dart';
 import 'screens/test_theme/test_elevateButton.dart';
+import 'screens/test_theme/test_appbar.dart';
 
 
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme : AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
-      home: const TestTextScreen(),
+      home: const TestAppBar(),
     );
   }
 }

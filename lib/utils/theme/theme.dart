@@ -12,6 +12,8 @@ import '/utils/theme/custom-themes/textformfield_theme.dart';
 
 
 
+
+
 class AppTheme{
   AppTheme._();
   static ThemeData lightTheme = ThemeData(
@@ -28,6 +30,7 @@ class AppTheme{
     outlinedButtonTheme: TOutlinedButtonTheme.lightOutlinedButtonTheme,
     textButtonTheme: TTextButtonTheme.lightTextButtonTheme,
     inputDecorationTheme: TTextFormFieldTheme.lightInputDecorationTheme,
+    dialogTheme: TDialogTheme.lightDialogTheme,
 
   );
 
@@ -45,6 +48,8 @@ class AppTheme{
     outlinedButtonTheme: TOutlinedButtonTheme.darkOutlinedButtonTheme,
     textButtonTheme: TTextButtonTheme.darkTextButtonTheme,
     inputDecorationTheme: TTextFormFieldTheme.darkInputDecorationTheme,
+    dialogTheme: TDialogTheme.darkDialogTheme,
+     
   );
 
     

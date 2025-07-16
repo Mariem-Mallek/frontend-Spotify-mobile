@@ -6,6 +6,7 @@ import '/utils/theme/custom-themes/buttom_sheet_theme.dart';
 import '/utils/theme/custom-themes/checkbox_theme.dart';
 import '/utils/theme/custom-themes/chip_theme.dart';
 import '/utils/theme/custom-themes/dialog_theme.dart';
+import '/utils/theme/custom-themes/outlined_button_theme.dart';
 
 
 
@@ -22,6 +23,8 @@ class AppTheme{
     bottomSheetTheme: TBottomSheetTheme.lightBottomSheetTheme,
     checkboxTheme: TCheckboxTheme.lightCheckboxTheme,
     chipTheme: TChipTheme.lightChipTheme,
+    outlinedButtonTheme: TOutlinedButtonTheme.lightOutlinedButtonTheme,
+
     
     
 
@@ -38,6 +41,7 @@ class AppTheme{
     bottomSheetTheme: TBottomSheetTheme.darkBottomSheetTheme,
     checkboxTheme: TCheckboxTheme.darkCheckboxTheme,
     chipTheme: TChipTheme.darkChipTheme,
+    outlinedButtonTheme: TOutlinedButtonTheme.darkOutlinedButtonTheme,
   );
 
     

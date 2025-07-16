@@ -11,9 +11,6 @@ import '/utils/theme/custom-themes/text_button_theme.dart';
 import '/utils/theme/custom-themes/textformfield_theme.dart';
 
 
-
-
-
 class AppTheme{
   AppTheme._();
   static ThemeData lightTheme = ThemeData(

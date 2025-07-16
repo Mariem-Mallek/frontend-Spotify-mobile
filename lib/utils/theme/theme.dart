@@ -3,6 +3,11 @@ import '/utils/constants/colors.dart';
 import '/utils/theme/custom-themes/elevated_button_theme.dart';
 import '/utils/theme/custom-themes/appbar_theme.dart';
 import '/utils/theme/custom-themes/buttom_sheet_theme.dart';
+import '/utils/theme/custom-themes/checkbox_theme.dart';
+import '/utils/theme/custom-themes/chip_theme.dart';
+
+
+
 
 class AppTheme{
   AppTheme._();
@@ -15,6 +20,9 @@ class AppTheme{
     elevatedButtonTheme: TElevatedButtonTheme.lightElevatedButtonTheme,
     appBarTheme: TAppBarTheme.lightAppBarTheme,
     bottomSheetTheme: TBottomSheetTheme.lightBottomSheetTheme,
+    checkboxTheme: TCheckboxTheme.lightCheckboxTheme,
+    chipTheme: TChipTheme.lightChipTheme,
+
   );
 
   static ThemeData darkTheme = ThemeData(
@@ -25,7 +33,9 @@ class AppTheme{
     scaffoldBackgroundColor: TColors.dark,
     elevatedButtonTheme: TElevatedButtonTheme.darkElevatedButtonTheme,
     appBarTheme: TAppBarTheme.darkAppBarTheme,
-     bottomSheetTheme: TBottomSheetTheme.darkBottomSheetTheme,
+    bottomSheetTheme: TBottomSheetTheme.darkBottomSheetTheme,
+    checkboxTheme: TCheckboxTheme.darkCheckboxTheme,
+    chipTheme: TChipTheme.darkChipTheme,
   );
 
     

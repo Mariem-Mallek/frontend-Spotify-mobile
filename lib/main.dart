@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:formation_flutter/screens/login/signin_page.dart';
+import 'package:formation_flutter/screens/login/splash_page.dart';
 import 'utils/theme/theme.dart';
 
 import 'screens/test_theme/test_text.dart';
@@ -27,7 +29,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme : AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
-      home: const TestTextFormField(),
+      home: const SigninPage(),
     );
   }
 }

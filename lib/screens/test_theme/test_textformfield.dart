@@ -52,6 +52,7 @@ class _TestTextFormFieldState extends State<TestTextFormField> {
               children: [
                 SvgPicture.asset("assets/images/logo-spotify.svg", height: 80),
                 SizedBox(height: 10),
+                
                 TextFormField(
                   controller: _emailController,
                   decoration: InputDecoration(
@@ -61,6 +62,7 @@ class _TestTextFormFieldState extends State<TestTextFormField> {
                   ),
                 ),
                 SizedBox(height: 10),
+
                 TextFormField(
                   controller: _passwordController,
                   obscureText: _passwordVisible,

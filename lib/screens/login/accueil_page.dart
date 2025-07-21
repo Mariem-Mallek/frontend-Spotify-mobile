@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart'; 
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:formation_flutter/screens/login/signup_page.dart';
 
-class SplashPage extends StatelessWidget {
-  const SplashPage({super.key});
+class AccueilPage extends StatelessWidget {
+  const AccueilPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +30,12 @@ class SplashPage extends StatelessWidget {
               const SizedBox(height: 20),
 
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const SignupPage()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   minimumSize: const Size(double.infinity, 50),
                 ),

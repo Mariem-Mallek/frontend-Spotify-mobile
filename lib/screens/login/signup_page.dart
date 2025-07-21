@@ -1,18 +1,18 @@
-import 'package:formation_flutter/screens/login/signup_page.dart';
-
-import '/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:form_field_validator/form_field_validator.dart';
+import 'package:formation_flutter/screens/login/signin_page.dart';
+import 'package:formation_flutter/utils/constants/colors.dart';
 
-class SigninPage extends StatefulWidget {
-  const SigninPage({super.key});
+class SignupPage extends StatefulWidget {
+  const SignupPage({super.key});
 
   @override
-  State<SigninPage> createState() => _SigninPageState();
+  State<SignupPage> createState() => _SignupPageState();
 }
 
-class _SigninPageState extends State<SigninPage> {
+class _SignupPageState extends State<SignupPage> {
+  late TextEditingController _usernameController;
   late TextEditingController _emailController;
   late TextEditingController _passwordController;
   late GlobalKey<FormState> _formkey;
@@ -20,6 +20,7 @@ class _SigninPageState extends State<SigninPage> {
 
   @override
   void initState() {
+    _usernameController = TextEditingController();
     _emailController = TextEditingController();
     _passwordController = TextEditingController();
     _formkey = GlobalKey<FormState>();
@@ -52,14 +53,25 @@ class _SigninPageState extends State<SigninPage> {
                   Center(
                     child: SvgPicture.asset("assets/images/logo-spotify.svg"),
                   ),
-
                   SizedBox(height: 20),
                   Text(
-                    "Welcome back ! Glad to see you, Again!",
+                    "Hello! Register to get started",
                     style: Theme.of(context).textTheme.headlineLarge,
                   ),
-
                   SizedBox(height: 20),
+                  TextFormField(
+                    controller: _usernameController,
+                    maxLines: 1,
+                    decoration: InputDecoration(
+                      labelText: "Enter your username",
+                      prefixIcon: Icon(Icons.person_outline_rounded),
+                    ),
+                    validator:
+                        MultiValidator([
+                          RequiredValidator(errorText: "* Required"),
+                        ]).call,
+                  ),
+                  SizedBox(height: 10),
                   TextFormField(
                     controller: _emailController,
                     maxLines: 1,
@@ -67,14 +79,14 @@ class _SigninPageState extends State<SigninPage> {
                       labelText: "Enter your email",
                       prefixIcon: Icon(Icons.email_outlined),
                     ),
-                    validator: MultiValidator([
-                      RequiredValidator(errorText: "* Required"),
-                      EmailValidator(
-                        errorText: "Please entre a valid email address",
-                      ),
-                    ]).call,
+                    validator:
+                        MultiValidator([
+                          RequiredValidator(errorText: "* Required"),
+                          EmailValidator(
+                            errorText: "Please entre a valid email address",
+                          ),
+                        ]).call,
                   ),
-
                   SizedBox(height: 10),
                   TextFormField(
                     controller: _passwordController,
@@ -96,26 +108,23 @@ class _SigninPageState extends State<SigninPage> {
                         ),
                       ),
                     ),
-                    validator: MultiValidator([
-                      RequiredValidator(errorText: "* Required"),
-                      MinLengthValidator(
-                        6,
-                        errorText: "Password must be at least 6 characters.",
-                      ),
-                      MaxLengthValidator(
-                        15,
-                        errorText: "Password must not exceed 15 characters.",
-                      ),
-                    ]).call,
-                  ),
-                  Align(
-                    alignment: Alignment.bottomRight,
-                    child: TextButton(
-                      onPressed: () {},
-                      child: Text("Forget password?"),
-                    ),
+                    validator:
+                        MultiValidator([
+                          RequiredValidator(errorText: "* Required"),
+                          MinLengthValidator(
+                            6,
+                            errorText:
+                                "Password must be at least 6 characters.",
+                          ),
+                          MaxLengthValidator(
+                            15,
+                            errorText:
+                                "Password must not exceed 15 characters.",
+                          ),
+                        ]).call,
                   ),
 
+                  SizedBox(height: 20),
                   ElevatedButton(
                     onPressed: () {
                       if (_formkey.currentState!.validate()) {
@@ -127,7 +136,7 @@ class _SigninPageState extends State<SigninPage> {
                     style: ElevatedButton.styleFrom(
                       minimumSize: Size(double.infinity, 50),
                     ),
-                    child: Text("Sign In"),
+                    child: Text("Sign Up"),
                   ),
 
                   Center(
@@ -135,9 +144,7 @@ class _SigninPageState extends State<SigninPage> {
                       onPressed: () {
                         Navigator.pushReplacement(
                           context,
-                          MaterialPageRoute(
-                            builder: (context) => const SignupPage(),
-                          ),
+                          MaterialPageRoute(builder: (context) => SigninPage()),
                         );
                       },
                       child: RichText(
@@ -145,9 +152,9 @@ class _SigninPageState extends State<SigninPage> {
                         text: TextSpan(
                           style: Theme.of(context).textTheme.bodyMedium,
                           children: [
-                            TextSpan(text: "Don't have an account? "),
+                            TextSpan(text: "Already have an account? "),
                             TextSpan(
-                              text: "Register! ",
+                              text: "Login! ",
                               style: TextStyle(color: TColors.primary),
                             ),
                           ],
@@ -164,3 +171,4 @@ class _SigninPageState extends State<SigninPage> {
     );
   }
 }
+  

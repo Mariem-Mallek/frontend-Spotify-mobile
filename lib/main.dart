@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:formation_flutter/screens/login/signin_page.dart';
-import 'package:formation_flutter/screens/login/accueil_page.dart';
-import 'package:formation_flutter/screens/login/signup_page.dart';
 import 'utils/theme/theme.dart';
 
 import 'screens/test_theme/test_text.dart';
@@ -12,6 +9,10 @@ import 'screens/test_theme/test_outlinedButton.dart';
 import 'screens/test_theme/test_buttomsheet.dart';
 import 'screens/test_theme/test_textformfield.dart';
 import 'screens/test_theme/test_appbar.dart';
+
+import 'package:formation_flutter/screens/login/signin_page.dart';
+import 'package:formation_flutter/screens/login/accueil_page.dart';
+import 'package:formation_flutter/screens/login/signup_page.dart';
 
 
 
